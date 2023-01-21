@@ -4,6 +4,7 @@ import Form from '../src/components/Form/Form'
 import Image from './components/Image/Image';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Error from './components/Error/Error';
 // import Spinner from './components/Spinner/Spinner';
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Form/>
       {/* <Spinner/> */}
+      <Error/>
       <Image/>
       <Footer/>
     </PromptState>
