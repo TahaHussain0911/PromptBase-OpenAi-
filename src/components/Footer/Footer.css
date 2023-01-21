@@ -1,0 +1,21 @@
+.footer-container{
+    padding: 70px;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+}
+.footer-container .links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3vh;
+}
+.footer-container .icons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-container .icons i{
+    color: white;
+    font-size: 20px;
+}

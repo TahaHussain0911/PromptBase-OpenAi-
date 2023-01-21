@@ -1,0 +1,66 @@
+.image-container{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+    min-height: 15vh;
+}
+.image-container .image{
+    position: relative;
+    transition: 0.4s all;
+}
+.image-container img{
+    max-width: 400px;
+    cursor: pointer;
+}
+.image-container .image i{
+    font-weight: 900;
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transition:0.2s all;
+}
+.image-container button{
+    padding: 9px 37px;
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    border: 1px solid white;
+    margin-bottom: 8vh;
+}
+.image:hover{
+    transform: translateY(-10px);
+}
+.image:hover i{
+    opacity: 1;
+}
+@media screen and (max-width:1140px) {
+    .image-container .btn,.image-container .btn button{
+        width: 100%;
+    }
+}
+@media screen and (max-width:900px){
+    .image-container{
+        width: 99%;
+    }
+}
+@media screen and (max-width:450px){
+    .image-container img{
+        max-width: 300px;
+    }
+}
+@media screen and (max-width:450px){
+    .image-container img{
+        max-width: 250px;
+    }
+}

@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-
+import PromptState from './context/PromptState';
+import Form from '../src/components/Form/Form'
+import Image from './components/Image/Image';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+// import Spinner from './components/Spinner/Spinner';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <PromptState>
+      <Navbar/>
+      <Form/>
+      {/* <Spinner/> */}
+      <Image/>
+      <Footer/>
+    </PromptState>
+    );
 }
 
 export default App;
