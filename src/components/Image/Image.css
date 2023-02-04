@@ -9,11 +9,17 @@
     margin-bottom: 10vh;
     min-height: 15vh;
 }
+.images{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .image-container .image{
     position: relative;
     transition: 0.4s all;
 }
-.image-container img{
+.image-container .img-fluid{
     max-width: 400px;
     cursor: pointer;
 }
@@ -41,9 +47,48 @@
 .image:hover{
     transform: translateY(-10px);
 }
+.stop{
+    transform: scale(0.9);
+    transition: 0.1s all;
+}
+.stop:hover{
+    transform: translateY(0px);
+    transform: scale(0.9);
+
+}
 .image:hover i{
     opacity: 1;
 }
+.image::after{
+    display: block;
+}
+.select::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 4;
+    opacity: 0.5;
+    /* display: none; */
+    cursor: pointer;
+}
+.select-image{
+    display: none;
+}
+.hide{
+    position: absolute;
+    cursor: pointer;
+    top: 27%;
+    left: 31%;
+    z-index: 4;
+    height: 150px;
+    width: 150px;
+    display: block;
+}
+
 @media screen and (max-width:1140px) {
     .image-container .btn,.image-container .btn button{
         width: 100%;
@@ -55,12 +100,12 @@
     }
 }
 @media screen and (max-width:450px){
-    .image-container img{
+    .image-container .img-fluid{
         max-width: 300px;
     }
 }
 @media screen and (max-width:450px){
-    .image-container img{
+    .image-container .img-fluid{
         max-width: 250px;
     }
 }

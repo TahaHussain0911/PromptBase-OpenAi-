@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+.option-relative{
+    position: relative;
+}
+.option-container{
+    margin: 0 auto;
+    position: absolute;
+    width: 12%;
+    padding-top: 20px;
+    height: 100%;
+    z-index: 2;
+    right: 70px;
+    top:-10px;
+    cursor: pointer;
+}
+.select-btn,.options{
+    color: #222236;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 100%;
+    transition: 0.2s all;
+}
+.select-btn:hover{
+    background-color: rgb(214, 211, 211);
+}
+.options{
+    margin-top: 6px;
+    /* display: none; */
+    height: 0%;
+    opacity: 0;
+    /* display: none; */
+    transition: 0.2s all;
+    z-index: 2; 
+}
+.select-btn i{
+    transition: 0.2s all;
+}
+.active{    
+    height: 100%;
+    opacity: 1;
+    /* display: block; */
+    z-index: 2;
+
+}
+.rotate{
+    transform: rotate(-180deg);
+}
+.options ul{
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+}
+.options ul li{
+    padding: 10px;
+    margin-top: 3px;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+.options ul li:hover{
+    background-color: #222236;
+    color: white;
+
+}

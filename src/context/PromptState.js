@@ -9,6 +9,7 @@ const PromptState = (props) => {
   const [data, setdata] = useState(false);
   const [error, seterror] = useState(false)
   const [loadingBar, setloadingBar] = useState(false);
+  const [imageValue, setimageValue] = useState(1)
   const getApi = new Configuration({
     apiKey: apiKey,
   });
@@ -20,13 +21,13 @@ const PromptState = (props) => {
       try {
         const response = await getOpenAi.createImage({
           prompt: input,
-          n: 1,
+          n: imageValue,
           size: "512x512",
         });
-        console.log(response);
+        // console.log(response);
         // console.log("hello")
-        // console.log(response.data.data[0].url);
-        setimage(response.data.data[0].url);
+        setimage(response.data.data);
+        console.log(response.data.data);
         setdata(true);
         seterror(false)
       } catch (error) {
@@ -47,7 +48,8 @@ const PromptState = (props) => {
         data,
         setdata,
         loadingBar,
-        error
+        error,
+        setimageValue
       }}
     >
       {props.children}

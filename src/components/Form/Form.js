@@ -1,5 +1,6 @@
 import React, { useContext,useEffect,useState } from "react";
 import PromptContext from "../../context/PromptContext";
+import Options from "../Options/Options";
 import './Form.css'
 const Form = () => {
   const getContext = useContext(PromptContext);
@@ -20,7 +21,7 @@ const Form = () => {
     else{
       setdata(false);
     }
-    console.log(value);
+    // console.log(value);
 
   }
   return (
@@ -43,6 +44,7 @@ const Form = () => {
             Create
           </button>
         </form>
+          <Options/>
       </div>
     </div>
   );
