@@ -15,6 +15,8 @@ const Form = () => {
   }
   const handleClick=(e)=>{
     e.preventDefault();
+    console.log(value)
+    console.log(input)
     if (value!=="") {
       setinput(value);
     }

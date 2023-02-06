@@ -5,7 +5,7 @@ import Image from './components/Image/Image';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Error from './components/Error/Error';
-// import Spinner from './components/Spinner/Spinner';
+import Spinner from './components/Spinner/Spinner';
 function App() {
   return (
     <PromptState>

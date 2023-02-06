@@ -1,9 +1,24 @@
 .d-flex{
     margin: 0 auto;
-    width: 80%;
+    width: 40%;
     margin-top: 10vh;
+    flex-direction: column;
+    /* background-color: silver; */
+    padding: 10px;
 }
 .d-flex img{
     width: 100%;
-    height: 13px;
+    height: 300px;
+}
+.d-flex p{
+    color: white;
+}
+.progressbar{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 6px;
+	border-radius: 10px;
+	background-color: transparent;
+
 }
